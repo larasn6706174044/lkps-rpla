@@ -1,0 +1,350 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* top navigation */
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 1%;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    }
+ul.nav img {
+    float: right;
+    width: 90px;
+}
+ul.nav li {
+    float: right;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 7%;
+}
+ul.nav li a {
+    display: inline-block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: Malgun Gothic;
+    } 
+ul.nav li img {
+  width: 10%;
+  float: right;
+  display: inline-block;
+  padding-top: 10px;
+} 
+ul.nav li a:hover:not(.aktif) {border-bottom: 2px solid #828282;}
+ul.nav li a.aktif {
+    border-bottom: 2px solid #008FD7;
+}
+
+ul.nav li button:hover:not(.aktif) {border-bottom: 2px solid #828282;}
+ul.nav li button.aktif {
+    border-bottom: 2px solid #008FD7;
+}
+ul.nav li .dropdown a{
+    position: relative;
+    display: inline-block;
+    
+}
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+  
+  .dropdown_content a {
+    color: #FFFFFF;
+    width: 85%;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .dropdown_content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown_content {
+    display: block;
+  }
+  
+ul.nav li.icon {display: none;}
+@media screen and (max-width:640px) {
+  ul.nav li:not(:first-child) {display: none;}
+  ul.nav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+@media screen and (max-width:680px) {
+  ul.nav.responsive {position: relative;}
+  ul.nav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.nav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.nav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+/* header */
+.header {
+  width: 100%;
+}
+.header_left{
+  width: 50%;
+  float: left;
+}
+.header_left p {
+  text-align : center;
+  display: block;
+  font-size: 24px;
+  padding:20px;
+}
+.header_left table{
+  width: 40%;
+  display: block;
+  margin: auto;
+}
+.header_left table td{
+  width: 50%;
+}
+.header_left table td img {
+  width : 40%;
+  display: block;
+  margin: auto;
+}
+.header_left button{
+  display: block;
+  margin: auto; 
+  margin-top: 20px;
+  width: 35%;
+  padding : 10px;
+  background : linear-gradient(271.66deg, #96EBC9 -44.59%, #1D98D6 99.7%, #008FD7 99.72%);
+  border: 0px solid white;
+  border-radius: 8px;
+}
+.header_left button:hover {
+  background : linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(271.66deg, #96EBC9 -44.59%, #1D98D6 99.7%, #008FD7 99.72%);
+}
+.header_left button b {
+  color: white;
+  font-size: 16px;
+}
+.header_left i {
+  font-size: 10px;
+  display: block;
+  margin: auto;
+  color: #828282;
+  text-align: center;
+}
+.header_right{
+  width: 50%;
+  float: right;
+}
+.header_right img {
+  width: 65%;
+  padding: 10%;
+}
+
+/* flag */
+
+
+/* upload berkas */
+
+
+.container {
+  border-radius: 5px;
+  width: 70%;
+  height: 10%;
+  margin: auto;
+  display: block;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=text], #jenis, textarea {
+  width: 70%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=file] {
+  color: #111111;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70%;
+}
+
+input[type=submit] {
+  background-color: #008FD7;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70%;
+}
+
+input[type=submit]:hover {
+  background-color: #0072AC;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 1%;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* hasil */
+.output {
+  width: 100%;
+  float: left;
+}
+.right_side{
+  width: 100%;
+  background-color: aqua;
+}
+.right_side p{
+  padding: 2%;
+}
+.right_side input[type=text]{
+  width: 20%;
+  position: right;
+}
+.output table{
+  width: 100%;
+  display: block;
+  margin: auto;
+  /* background-color: brown; */
+  border-collapse: collapse;
+}
+.output table td{
+  width: 25%;
+  padding: 2%;
+  border-bottom: 1px solid #ddd;
+}
+.output table td.no{
+  width: 5%;
+}
+.output table td.action input[type=checkbox]{
+  display: block;
+  margin: auto;
+}
+.output table td.action{
+  width: 50%;
+  padding: 12px 0px;
+}
+.output table td.action button{
+  background-color: #008FD7;
+  color: white;
+  padding: 2%;
+  height: 30px;
+  width: 90px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 1% 0%;
+}
+.output table td.action button:hover {
+  background-color: #0072AC;
+}
+.output table td.kode{
+  width: 20%;
+}
+
+/* login */
+  /*Trigger Button*/
+.login-trigger {
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to bottom right, #B05574, #F87E7B);
+  padding: 15px 30px;
+  border-radius: 30px;
+  position: relative; 
+  top: 50%;
+}
+
+/*Modal*/
+h4 {
+  font-weight: bold;
+  color: #fff;
+}
+.close {
+  color: #fff;
+  transform: scale(1.2)
+}
+.form-control {
+  margin: 1em 0;
+}
+.username, .password {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #eee;
+  padding-left: 0;
+  font-weight: normal;
+  background: transparent;  
+}
+.form-control::-webkit-input-placeholder {
+  color: #eee;  
+}
+.form-control:focus::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #fff;
+}
+.login {
+  padding: 6px 20px;
+  border-radius: 20px;
+  background: none;
+  border: 2px solid #FAB87F;
+  color: #FAB87F;
+  font-weight: bold;
+  transition: all .5s;
+  margin-top: 1em;
+}
+.login:hover {
+  background: #FAB87F;
+  color: #fff;
+}
