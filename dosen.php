@@ -100,6 +100,9 @@ if (isset($_SESSION['dosen_id'])) {
     <ul class="nav">
         <li><a href="logout.php">Logout</a></li>
         <li><button type="button" class="but" data-toggle="modal" data-target="#myModal">Ubah Password</button></li>
+        <li><button type="button" class="but" onclick="intentReadData()">Tampil Data</button></li>
+        <li><button type="button" class="but" onclick="intentHome()">Home</button></li>
+
     </ul>
     <div class="header">
         <div class="header_left">
@@ -270,63 +273,7 @@ if (isset($_SESSION['dosen_id'])) {
             </div>
         </div>
     </center>
-    <div class="output">
-    <span class="badge" id="badge">Filter</span>
-        <select name="filter" id="filter" class="form-control" onchange="getData()"> 
-            <option value="1">1. Tata Pamong, Tata Kelola, dan Kerjasama</option>
-            <option value="2">2. Mahasiswa</option>
-            <option value="3">3. Profil Dosen</option>
-            <option value="4">4. Keuangan, Sarana, dan Prasarana</option>
-            <option value="5">5. Pendidikan</option>
-            <option value="6">6. Penelitian</option>
-            <option value="7">7. Pengabdian kepada Masyarakat</option>
-            <option value="8">8. Luaran dan Capaian Tridharma</option>
-        </select>
-        <center>
-            <div class="tampung">
 
-            </div>
-        </center>
-        <footer>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <p>Raka Daffa Arrival & Septy Rahmadilha & Muhammad Hisyam Fadhil &copy;<?= date('Y'); ?> | <a
-                                href="#">LKPS</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- footer -->
-
-    <!-- footer -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Ubah Password</h4>
-                </div>
-                <div class="modal-body">
-                    <form action="updatePassword.php" method="POST" id="ubahPassword">
-                    Password Lama :<input type="password" class="form-control" name="password_lama" placeholder="Password Lama">
-                    Password Baru :<input type="password" class="form-control" name="password_baru" placeholder="Password Baru">
-                        <input type="submit" value="Simpan" name="simpan">
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
     </div>
 </body>
@@ -437,6 +384,15 @@ if (isset($_SESSION['dosen_id'])) {
             }
         });
     }
+
+    function intentReadData() {
+        window.location.href = "tampildata.php";
+    }
+
+    function intentHome() {
+        window.location.href = "dosen.php";
+    }
+
 </script>
 <?php
 }else {
