@@ -13,13 +13,21 @@ if (isset($_SESSION['dosen_id'])) {
     <html lang="en">
 
     <head>
-        <title>Home</title>
+        <title>Tampil Data</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/file.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
         <style>
+
+            .tampilData {
+                width: 100%;
+                height: 85%;
+                padding: 20px 20px 20px 10px;
+                background-color: #FFFFFF;
+            }
+
             .but {
                 display: inline-block;
                 color: #000000;
@@ -37,6 +45,32 @@ if (isset($_SESSION['dosen_id'])) {
                 outline: none;
             }
 
+            .buttonfilter {
+                width: 250px;
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: left;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            .buttonfilterHov {
+                background-color: white;
+                color: black;
+                border: 2px solid #008CBA;
+            }
+
+            .buttonfilterHov:hover {
+                background-color: #008CBA;
+                color: white;
+            }
+
             .but:hover:not(.aktif) {
                 border-bottom: 2px solid #828282;
             }
@@ -45,7 +79,7 @@ if (isset($_SESSION['dosen_id'])) {
                 border-bottom: 2px solid #008FD7;
             }
 
-            footer {
+            footerpage {
                 position: relative;
                 bottom: 0;
                 width: 100%;
@@ -55,13 +89,15 @@ if (isset($_SESSION['dosen_id'])) {
                 margin-top: 32px;
             }
 
+
             footer p {
                 color: white;
                 font-size: 1em;
             }
 
             .tampung {
-                width: 98%;
+                float: right;
+                width: 80%;
             }
 
             .coba {
@@ -103,49 +139,39 @@ if (isset($_SESSION['dosen_id'])) {
         <li><button type="button" class="but" onclick="intentHome()">Home</button></li>
     </ul>
 
-    <div class="output">
-        <span class="badge" id="badge">Filter</span>
-<!--        <select name="filter" id="filter" class="form-control" onchange="getData()">-->
-<!--            <option value="1">1. Tata Pamong, Tata Kelola, dan Kerjasama</option>-->
-<!--            <option value="2">2. Mahasiswa</option>-->
-<!--            <option value="3">3. Profil Dosen</option>-->
-<!--            <option value="4">4. Keuangan, Sarana, dan Prasarana</option>-->
-<!--            <option value="5">5. Pendidikan</option>-->
-<!--            <option value="6">6. Penelitian</option>-->
-<!--            <option value="7">7. Pengabdian kepada Masyarakat</option>-->
-<!--            <option value="8">8. Luaran dan Capaian Tridharma</option>-->
-<!--        </select>-->
-<!--        -->
-        <div>
-            <button onclick="getData1()">1. Tata Pamong, Tata Kelola, dan Kerjasama</button>
-            <button onclick="getData2()">2. Mahasiswa</button>
-            <button onclick="getData3()">3. Profil Dosen</button>
-            <button onclick="getData4()">4. Keuangan, Sarana, dan Prasarana</button>
-            <button onclick="getData5()">5. Pendidikan</button>
-            <button onclick="getData6()">6. Penelitian</button>
-            <button onclick="getData7()">7. Pengabdian kepada Masyarakat</button>
-            <button onclick="getData8()">8. Luaran dan Capaian Tridharma</button>
+    <div class="tampilData">
+        <!--    membuat menu berada disebelah kiri  -->
+        <div class="output">
+            <button class="buttonfilter buttonfilterHov" onclick="getData1()">1. Tata Pamong, Tata Kelola, dan Kerjasama</button>
+            <button class="buttonfilter buttonfilterHov" onclick="getData2()">2. Mahasiswa</button>
+            <button class="buttonfilter buttonfilterHov" onclick="getData3()">3. Profil Dosen</button>
+            <button class="buttonfilter buttonfilterHov" onclick="getData4()">4. Keuangan, Sarana, dan Prasarana</button>
+            <button class="buttonfilter buttonfilterHov" onclick="getData5()">5. Pendidikan</button>
+            <button class="buttonfilter buttonfilterHov" onclick="getData6()">6. Penelitian</button>
+            <button class="buttonfilter buttonfilterHov" onclick="getData7()">7. Pengabdian kepada Masyarakat</button>
+            <button class="buttonfilter buttonfilterHov" onclick="getData8()">8. Luaran dan Capaian Tridharma</button>
         </div>
+        <!--    batas sebelah kiri -->
+
+        <!--    tampilan dokumen sebelah kanan-->
+
         <center>
             <div class="tampung">
 
             </div>
         </center>
-        <footer>
+    </div>
+<!--    batas tampil kanan-->
+    <footer>
             <div class="container text-center">
                 <div class="row">
                     <div class="col-sm-12">
-                        <p>Raka Daffa Arrival & Septy Rahmadilha & Muhammad Hisyam Fadhil &copy;<?= date('Y'); ?> | <a
+                    <p>Raka Daffa Arrival & Septy Rahmadilha & Muhammad Hisyam Fadhil &copy;<?= date('Y'); ?> | <a
                                 href="#">LKPS</a>.</p>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
-
-    <!-- footer -->
-
-    <!-- footer -->
+    </footer>
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
