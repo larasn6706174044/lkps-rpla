@@ -290,9 +290,22 @@ input[type="submit"]:hover {
 }
 
 /* hasil */
+#art-footer{
+  border-top: 1px solid #FEFEFE;
+  clear: both;
+  width: 950px;
+  margin: 2px auto 10px;
+  background: #CCCCCC ;
+  color: #000000;
+  text-align: center;
+  padding:15px;
+}
+
 .output {
-  width: 100%;
+  width: 20%;
+  margin: 0 auto;
   float: left;
+  padding: 10px;
 }
 .right_side {
   width: 100%;
