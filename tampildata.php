@@ -20,31 +20,161 @@ if (isset($_SESSION['dosen_id'])) {
         <link rel="stylesheet" type="text/css" href="css/file.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
         <style>
-
-            .tampilData {
-                width: 100%;
-                height: 85%;
-                padding: 20px 20px 20px 10px;
-                background-color: #FFFFFF;
+            body{
+                font-family: 'Open Sans', 'Roboto';
             }
-
             .but {
                 display: inline-block;
-                color: #000000;
-                text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
                 transition: 0.3s;
-                font-size: 14px;
-                font-family: Malgun Gothic;
                 background-color: Transparent;
-                background-repeat: no-repeat;
                 border: none;
                 cursor: pointer;
                 overflow: hidden;
                 outline: none;
             }
 
+            footer {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                background-color: #333;
+                padding-top: 15px;
+                margin-top: 32px;
+            }
+
+            footer p {
+                color: white;
+                font-size: 1em;
+            }
+
+            .tampung {
+                width: 80%;
+                float: right;
+            }
+
+            .coba {
+                float: left;
+                width: 100%;
+                height: 10%;
+                margin: auto;
+                display: block;
+                padding: 2%;
+                color: #FFFFFF;
+
+                /* gradient1 */
+
+                background: linear-gradient(271.9deg, #96EBC9 -44.59%, #1D98D6 99.7%, #008FD7 99.72%);
+            }
+
+            .bg {
+                margin:10% 20%;
+                width: 60%;
+                padding: 5% 0%;
+                float: left;
+                z-index:1;
+                top:70vh;
+                position:absolute;
+                background-color:#fff;
+                box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+                border-radius:4px;
+            }
+
+            #filter{
+                width:400px;
+                margin-left:16px;
+            }
+
+            #badge{
+                margin-left:16px;
+                background:#008FD7;
+            }
+
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: #3e8e41;
+            }
+
+            #myInput {
+                box-sizing: border-box;
+                background-image: url('aset/search.png');
+                background-position: 14px 12px;
+                background-repeat: no-repeat;
+                font-size: 16px;
+                padding: 14px 20px 12px 45px;
+                border: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            #myInput:focus {outline: 3px solid #ddd;}
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f6f6f6;
+                min-width: 230px;
+                overflow: auto;
+                border: 1px solid #ddd;
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown a:hover {background-color: #ddd;}
+
+            .show {display: block;}
+
+            .topnav {
+                overflow: hidden;
+                background-color: #314152;
+
+            }
+
+            .topnav button, .topnav a {
+                float: right;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                transition:0.3s
+            }
+
+            .topnav a:hover, .but:hover:not(.aktif) {
+                background-color: #F7E9A0;
+                color: #314152;
+            }
+
+            .but.aktif{
+                background-color: #F7E9A0;
+            }
+
+            .topnav a.active {
+                background-color: #F7E9A0;
+                color: #314152;
+
+            }
             .buttonfilter {
                 width: 250px;
                 background-color: #4CAF50;
@@ -70,74 +200,27 @@ if (isset($_SESSION['dosen_id'])) {
                 background-color: #008CBA;
                 color: white;
             }
-
-            .but:hover:not(.aktif) {
-                border-bottom: 2px solid #828282;
-            }
-
-            .but.aktif {
-                border-bottom: 2px solid #008FD7;
-            }
-
-            footerpage {
-                position: relative;
-                bottom: 0;
-                width: 100%;
-                height: 50px;
-                background-color: #333;
-                padding-top: 15px;
-                margin-top: 32px;
-            }
-
-
-            footer p {
-                color: white;
-                font-size: 1em;
-            }
-
-            .tampung {
-                float: right;
-                width: 80%;
-            }
-
-            .coba {
-                float: left;
-                width: 100%;
-                height: 10%;
-                margin: auto;
-                display: block;
-                padding: 2%;
-                color: #FFFFFF;
-
-                /* gradient1 */
-
-                background: linear-gradient(271.9deg, #96EBC9 -44.59%, #1D98D6 99.7%, #008FD7 99.72%);
-            }
-
-            .bg {
-                width: 100%;
-                padding: 5%;
-                float: left;
-            }
-
-            #filter{
-                width:400px;
-                margin-left:16px;
-            }
-
-            #badge{
-                margin-left:16px;
-                background:#008FD7;
-            }
         </style>
     </head>
     <body>
-    <ul class="nav">
-        <li><a href="logout.php">Logout</a></li>
-        <li><button type="button" class="but" data-toggle="modal" data-target="#myModal">Ubah Password</button></li>
-        <li><button type="button" class="but" onclick="intentReadData()">Tampil Data</button></li>
-        <li><button type="button" class="but" onclick="intentHome()">Home</button></li>
-    </ul>
+    <div class="topnav">
+        <a href="logout.php">Logout</a>
+        <button type="button" class="but" data-toggle="modal" data-target="#myModal">Ubah Password</button>
+        <a  href="tampildata.php" class="active">Lihat Data</a>
+        <a href="dosen.php" >Tambah Data</a>
+        <a href=""" style="position:absolute;left:0px">Selamat datang,
+        <?php
+        if($_SESSION['kelamin']=='L') {
+            echo "Pak ".$_SESSION['nama_dosen'];
+        }
+
+        else if($_SESSION['kelamin']=='P') {
+            echo "Ibu ".$_SESSION['nama_dosen'];
+        }
+
+        ?>
+        </a>
+    </div>
 
     <div class="tampilData">
         <!--    membuat menu berada disebelah kiri  -->
@@ -155,19 +238,16 @@ if (isset($_SESSION['dosen_id'])) {
 
         <!--    tampilan dokumen sebelah kanan-->
 
-        <center>
-            <div class="tampung">
+        <div class="tampung">
 
-            </div>
-        </center>
+        </div>
     </div>
 <!--    batas tampil kanan-->
     <footer>
-            <div class="container text-center">
+            <div class="container text-center footer">
                 <div class="row">
-                    <div class="col-sm-12">
-                    <p>Raka Daffa Arrival & Septy Rahmadilha & Muhammad Hisyam Fadhil &copy;<?= date('Y'); ?> | <a
-                                href="#">LKPS</a>.</p>
+                    <div class="col-lg-12">
+                    <p>Raka Daffa Arrival & Septy Rahmadilha & Muhammad Hisyam Fadhil &copy;<?= date('Y'); ?> | <a href="#">LKPS</a>.</p>
                     </div>
                 </div>
             </div>
