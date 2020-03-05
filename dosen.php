@@ -73,7 +73,7 @@ if (isset($_SESSION['dosen_id'])) {
         }
 
         .bg {
-            margin:10% 20%;
+            margin:5% 20%;
             width: 60%;
             padding: 5% 0%;
             float: left;
@@ -149,13 +149,14 @@ if (isset($_SESSION['dosen_id'])) {
 
         .topnav {
         overflow: hidden;
-        background-color: #314152;
+        /* background-color: #314152; */
+        padding:0px 36px;
         
         }
 
         .topnav button, .topnav a {
         float: right;
-        color: #f2f2f2;
+        color: #314152;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -164,18 +165,16 @@ if (isset($_SESSION['dosen_id'])) {
         }
 
         .topnav a:hover, .but:hover:not(.aktif) {
-            background-color: #F7E9A0;
-            color: #314152;
+            border-bottom: 2px solid #F7E9A0;
+
         }
 
         .but.aktif{
-            background-color: #F7E9A0;
+            border-bottom: 2px solid #F7E9A0;
         }
 
         .topnav a.active {
-            background-color: #F7E9A0;
-            color: #314152;
-
+            border-bottom: 2px solid #F7E9A0;
         }
     </style>
 </head>
@@ -184,9 +183,9 @@ if (isset($_SESSION['dosen_id'])) {
     <div class="topnav">
         <a href="logout.php">Logout</a>
         <button type="button" class="but" data-toggle="modal" data-target="#myModal">Ubah Password</button>
-        <a  href="#">Lihat Data</a>
+        <a  href="tampildata.php">Lihat Data</a>
         <a href="#" class="active">Tambah Data</a>
-        <a href="#" style="position:absolute;left:0px">Selamat datang,
+        <a href="#" style="position:absolute;left:36px;border-bottom: 2px solid #F7E9A0;">Selamat datang,
         <?php 
             if($_SESSION['kelamin']=='L') {
                 echo "Pak ".$_SESSION['nama_dosen'];
@@ -201,24 +200,19 @@ if (isset($_SESSION['dosen_id'])) {
     </div>
     <div class="header">
         <div class="header_left">
-            <img src="aset/landing_img.svg">
+            <!-- <img src="aset/landing_img.svg"> -->
             
         </div>
-        <div class="header_right" style="color:#314152">
+        <div class="header_right">
             <p> 
                 <span style="font-size: 64px;letter-spacing:3;font-weight:bold">L K P S</span>
                 <br><span style="letter-spacing:3">Laporan Kinerja Program Studi</span>
             </p>
             
-            <!-- <table>
-                <td><img class="aset" src="aset/telu.png" /></td>
-                <td>
-                    
-                </td>
-                <td></td>
-            </table> -->
-            <div class="row" style="padding-left:20px;margin-top:35%">
-                <div class="col-10" style="display:flex;padding-left:10px"><img class="aset" src="aset/telu.png" /><img  class="aset" src="aset/if.png" /></div>
+            <div class="row" style="padding-left:20px;margin-top:1%">
+                <div class="col-10" style="display:flex;padding-left:10px">
+                <img class="aset" src="aset/telu.png" />
+                <img  class="aset" src="aset/if.png" /></div>
                 <div class="col-50" style="width:40%;padding-left:20px">
                     <p style="padding:0px">
                         <b style="font-size: 12px;">D3 Rekayasa Perangkat Lunak Aplikasi

@@ -112,29 +112,31 @@ ul.nav li.icon {
 
 /* header */
 .header {
+  background-image: url("../aset/bg_add_data.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  background-color: #fbf4d0;
+  height: 100vh;
+  /* background-color: #fbf4d0; */
   z-index: -1;
 }
 .header_left {
-  background-color: #fbf4d0;
+  /* background-color: #fbf4d0; */
   width: 50%;
   float: left;
-  height: 170vh;
-}
-
-.header_left img {
-  width: 100%;
-  padding: 10% 0% 10% 10%;
+  height: 165vh;
 }
 
 .header_right {
-  background-color: #fbf4d0;
-  height: 170vh;
+  /* background-color: #fbf4d0; */
+  height: 165vh;
   width: 50%;
   float: right;
   padding-left: 2%;
-  padding-top: 5%;
+  padding-top: 3%;
+  color: #314152;
+  overflow: hidden;
 }
 
 .header_right p {
@@ -290,15 +292,15 @@ input[type="submit"]:hover {
 }
 
 /* hasil */
-#art-footer{
-  border-top: 1px solid #FEFEFE;
+#art-footer {
+  border-top: 1px solid #fefefe;
   clear: both;
   width: 950px;
   margin: 2px auto 10px;
-  background: #CCCCCC ;
+  background: #cccccc;
   color: #000000;
   text-align: center;
-  padding:15px;
+  padding: 15px;
 }
 
 .output {
