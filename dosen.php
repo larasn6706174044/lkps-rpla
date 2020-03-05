@@ -27,17 +27,6 @@ if (isset($_SESSION['dosen_id'])) {
         body{
             font-family: 'Open Sans', 'Roboto';
         }
-        .but {
-            display: inline-block;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: 0.3s;
-            background-color: Transparent;
-            border: none;
-            cursor: pointer;
-            overflow: hidden;
-            outline: none;
-        }
 
         footer {
             position: relative;
@@ -73,7 +62,7 @@ if (isset($_SESSION['dosen_id'])) {
         }
 
         .bg {
-            margin:10% 20%;
+            margin:5% 20%;
             width: 60%;
             padding: 5% 0%;
             float: left;
@@ -147,78 +136,28 @@ if (isset($_SESSION['dosen_id'])) {
 
         .show {display: block;}
 
-        .topnav {
-        overflow: hidden;
-        background-color: #314152;
         
-        }
-
-        .topnav button, .topnav a {
-        float: right;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        transition:0.3s
-        }
-
-        .topnav a:hover, .but:hover:not(.aktif) {
-            background-color: #F7E9A0;
-            color: #314152;
-        }
-
-        .but.aktif{
-            background-color: #F7E9A0;
-        }
-
-        .topnav a.active {
-            background-color: #F7E9A0;
-            color: #314152;
-
-        }
     </style>
 </head>
 
-<body>
-    <div class="topnav">
-        <a href="logout.php">Logout</a>
-        <button type="button" class="but" data-toggle="modal" data-target="#myModal">Ubah Password</button>
-        <a  href="tampildata.php">Lihat Data</a>
-        <a href="dosen.php" class="active">Tambah Data</a>
-        <a href=""" style="position:absolute;left:0px">Selamat datang,
-        <?php 
-            if($_SESSION['kelamin']=='L') {
-                echo "Pak ".$_SESSION['nama_dosen'];
-                }
+<body id="tambah-page">
+    <?php include_once('template/header.php');?>
 
-                else if($_SESSION['kelamin']=='P') {
-                    echo "Ibu ".$_SESSION['nama_dosen'];
-                }
-
-        ?>
-        </a>
-    </div>
     <div class="header">
         <div class="header_left">
-            <img src="aset/landing_img.svg">
+            <!-- <img src="aset/landing_img.svg"> -->
             
         </div>
-        <div class="header_right" style="color:#314152">
+        <div class="header_right">
             <p> 
                 <span style="font-size: 64px;letter-spacing: normal;font-weight:bold">L K P S</span>
                 <br><span style="letter-spacing: normal">Laporan Kinerja Program Studi</span>
             </p>
             
-            <!-- <table>
-                <td><img class="aset" src="aset/telu.png" /></td>
-                <td>
-                    
-                </td>
-                <td></td>
-            </table> -->
-            <div class="row" style="padding-left:20px;margin-top:35%">
-                <div class="col-10" style="display:flex;padding-left:10px"><img class="aset" src="aset/telu.png" /><img  class="aset" src="aset/if.png" /></div>
+            <div class="row" style="padding-left:20px;margin-top:1%">
+                <div class="col-10" style="display:flex;padding-left:10px">
+                <img class="aset" src="aset/telu.png" />
+                <img  class="aset" src="aset/if.png" /></div>
                 <div class="col-50" style="width:40%;padding-left:20px">
                     <p style="padding:0px">
                         <b style="font-size: 12px;">D3 Rekayasa Perangkat Lunak Aplikasi
@@ -412,6 +351,31 @@ if (isset($_SESSION['dosen_id'])) {
             </div>
         </footer>
     </div> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Ubah Password</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="updatePassword.php" method="POST" id="ubahPassword">
+                        Password Lama :<input type="password" class="form-control" name="password_lama" placeholder="Password Lama">
+                        Password Baru :<input type="password" class="form-control" name="password_baru" placeholder="Password Baru">
+                        <input type="submit" value="Simpan" name="simpan">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
     </div>
