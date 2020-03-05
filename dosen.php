@@ -110,7 +110,7 @@ if (isset($_SESSION['dosen_id'])) {
 
         #myInput {
         box-sizing: border-box;
-        background-image: url('searchicon.png');
+        background-image: url('aset/search.png');
         background-position: 14px 12px;
         background-repeat: no-repeat;
         font-size: 16px;
@@ -184,7 +184,7 @@ if (isset($_SESSION['dosen_id'])) {
         <a href="logout.php">Logout</a>
         <button type="button" class="but" data-toggle="modal" data-target="#myModal">Ubah Password</button>
         <a  href="tampildata.php">Lihat Data</a>
-        <a href="#" class="active">Tambah Data</a>
+        <a href="dosen.php" class="active">Tambah Data</a>
         <a href="#" style="position:absolute;left:36px;border-bottom: 2px solid #F7E9A0;">Selamat datang,
         <?php 
             if($_SESSION['kelamin']=='L') {
@@ -205,8 +205,8 @@ if (isset($_SESSION['dosen_id'])) {
         </div>
         <div class="header_right">
             <p> 
-                <span style="font-size: 64px;letter-spacing:3;font-weight:bold">L K P S</span>
-                <br><span style="letter-spacing:3">Laporan Kinerja Program Studi</span>
+                <span style="font-size: 64px;letter-spacing: normal;font-weight:bold">L K P S</span>
+                <br><span style="letter-spacing: normal">Laporan Kinerja Program Studi</span>
             </p>
             
             <div class="row" style="padding-left:20px;margin-top:1%">
