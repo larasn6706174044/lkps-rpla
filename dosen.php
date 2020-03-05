@@ -27,17 +27,6 @@ if (isset($_SESSION['dosen_id'])) {
         body{
             font-family: 'Open Sans', 'Roboto';
         }
-        .but {
-            display: inline-block;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: 0.3s;
-            background-color: Transparent;
-            border: none;
-            cursor: pointer;
-            overflow: hidden;
-            outline: none;
-        }
 
         footer {
             position: relative;
@@ -147,57 +136,13 @@ if (isset($_SESSION['dosen_id'])) {
 
         .show {display: block;}
 
-        .topnav {
-        overflow: hidden;
-        /* background-color: #314152; */
-        padding:0px 36px;
         
-        }
-
-        .topnav button, .topnav a {
-        float: right;
-        color: #314152;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        transition:0.3s
-        }
-
-        .topnav a:hover, .but:hover:not(.aktif) {
-            border-bottom: 2px solid #F7E9A0;
-
-        }
-
-        .but.aktif{
-            border-bottom: 2px solid #F7E9A0;
-        }
-
-        .topnav a.active {
-            border-bottom: 2px solid #F7E9A0;
-        }
     </style>
 </head>
 
-<body>
-    <div class="topnav">
-        <a href="logout.php">Logout</a>
-        <button type="button" class="but" data-toggle="modal" data-target="#myModal">Ubah Password</button>
-        <a  href="tampildata.php">Lihat Data</a>
-        <a href="dosen.php" class="active">Tambah Data</a>
-        <a href="#" style="position:absolute;left:36px;border-bottom: 2px solid #F7E9A0;">Selamat datang,
-        <?php 
-            if($_SESSION['kelamin']=='L') {
-                echo "Pak ".$_SESSION['nama_dosen'];
-                }
+<body id="tambah-page">
+    <?php include_once('template/header.php');?>
 
-                else if($_SESSION['kelamin']=='P') {
-                    echo "Ibu ".$_SESSION['nama_dosen'];
-                }
-
-        ?>
-        </a>
-    </div>
     <div class="header">
         <div class="header_left">
             <!-- <img src="aset/landing_img.svg"> -->
@@ -406,6 +351,31 @@ if (isset($_SESSION['dosen_id'])) {
             </div>
         </footer>
     </div> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Ubah Password</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="updatePassword.php" method="POST" id="ubahPassword">
+                        Password Lama :<input type="password" class="form-control" name="password_lama" placeholder="Password Lama">
+                        Password Baru :<input type="password" class="form-control" name="password_baru" placeholder="Password Baru">
+                        <input type="submit" value="Simpan" name="simpan">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
     </div>

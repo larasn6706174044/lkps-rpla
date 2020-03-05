@@ -19,20 +19,11 @@ if (isset($_SESSION['dosen_id'])) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/file.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+
         <style>
             body{
-                font-family: 'Open Sans', 'Roboto';
-            }
-            .but {
-                display: inline-block;
-                padding: 14px 16px;
-                text-decoration: none;
-                transition: 0.3s;
-                background-color: Transparent;
-                border: none;
-                cursor: pointer;
-                overflow: hidden;
-                outline: none;
+                font-family: 'Open Sans', 'Roboto'!important;
             }
 
             footer {
@@ -145,36 +136,6 @@ if (isset($_SESSION['dosen_id'])) {
 
             .show {display: block;}
 
-            .topnav {
-                overflow: hidden;
-                background-color: #314152;
-
-            }
-
-            .topnav button, .topnav a {
-                float: right;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 17px;
-                transition:0.3s
-            }
-
-            .topnav a:hover, .but:hover:not(.aktif) {
-                background-color: #F7E9A0;
-                color: #314152;
-            }
-
-            .but.aktif{
-                background-color: #F7E9A0;
-            }
-
-            .topnav a.active {
-                background-color: #F7E9A0;
-                color: #314152;
-
-            }
             .buttonfilter {
                 width: 250px;
                 background-color: #4CAF50;
@@ -202,25 +163,10 @@ if (isset($_SESSION['dosen_id'])) {
             }
         </style>
     </head>
-    <body>
-    <div class="topnav">
-        <a href="logout.php">Logout</a>
-        <button type="button" class="but" data-toggle="modal" data-target="#myModal">Ubah Password</button>
-        <a  href="tampildata.php" class="active">Lihat Data</a>
-        <a href="dosen.php" >Tambah Data</a>
-        <a href=""" style="position:absolute;left:0px">Selamat datang,
-        <?php
-        if($_SESSION['kelamin']=='L') {
-            echo "Pak ".$_SESSION['nama_dosen'];
-        }
-
-        else if($_SESSION['kelamin']=='P') {
-            echo "Ibu ".$_SESSION['nama_dosen'];
-        }
-
-        ?>
-        </a>
-    </div>
+    <body id="tampil-page">
+    <?php
+        include_once('template/header.php');
+    ?>
 
     <div class="tampilData">
         <!--    membuat menu berada disebelah kiri  -->
