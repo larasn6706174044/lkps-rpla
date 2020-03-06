@@ -238,10 +238,17 @@ input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   width: 70%;
+  transition: 0.4s;
 }
 
 input[type="submit"]:hover {
-  background-color: #0072ac;
+  box-shadow: 2px 2px 5px #3141529c;
+  background-color: #2f3d4d;
+}
+
+.modal-content {
+  width: 70%;
+  margin: auto;
 }
 
 .col-25 {
@@ -371,11 +378,12 @@ input[type="submit"]:hover {
 /*Modal*/
 h4 {
   font-weight: bold;
-  color: #fff;
+  color: #314152;
 }
 .close {
-  color: #fff;
+  color: #314152;
   transform: scale(1.2);
+  transition: 0.4s;
 }
 .form-control {
   margin: 1em 0;
@@ -410,4 +418,8 @@ h4 {
 .login:hover {
   background: #fab87f;
   color: #fff;
+}
+
+.btn-default:hover {
+  transition: 0.4s;
 }
