@@ -303,12 +303,7 @@ input[type="submit"]:hover {
   padding: 15px;
 }
 
-.output {
-  width: 20%;
-  margin: 0 auto;
-  float: left;
-  padding: 10px;
-}
+
 .right_side {
   width: 100%;
   background-color: aqua;
