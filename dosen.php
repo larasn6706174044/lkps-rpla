@@ -136,6 +136,10 @@ if (isset($_SESSION['dosen_id'])) {
 
         .show {display: block;}
 
+        #tambah{
+            border-bottom: 2px solid #F7E9A0;
+        }
+
         
     </style>
 </head>
@@ -352,37 +356,15 @@ if (isset($_SESSION['dosen_id'])) {
         </footer>
     </div> -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
+    
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Ubah Password</h4>
-                </div>
-                <div class="modal-body">
-                    <form action="updatePassword.php" method="POST" id="ubahPassword">
-                        Password Lama :<input type="password" class="form-control" name="password_lama" placeholder="Password Lama">
-                        Password Baru :<input type="password" class="form-control" name="password_baru" placeholder="Password Baru">
-                        <input type="submit" value="Simpan" name="simpan">
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <?php include_once('template/modal.php'); ?>
 
 
-    </div>
+</div>
 </body>
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
