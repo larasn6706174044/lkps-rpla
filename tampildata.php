@@ -52,9 +52,9 @@ if (isset($_SESSION['dosen_id'])) {
             .output {
                 width: 20%;
                 position: relative;
-                padding-top: 55px;
-                padding-bottom: 60px;
-                padding-left: 40px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-left: 30px;
                 float: left;
                 background-color: #fbf4d0;
                 border: 0px solid #fbf4d0;
@@ -65,7 +65,7 @@ if (isset($_SESSION['dosen_id'])) {
                 position: relative;
                 padding-top: 55px;
                 padding-bottom: 60px;
-                padding-left: 40px;
+                padding-left: 20px;
                 padding-right: 40px;
                 float: right;
             }
@@ -211,16 +211,17 @@ if (isset($_SESSION['dosen_id'])) {
 
             }
             .buttonfilter {
-                width: 250px;
+                width: 200px;
+                height: 50px;
                 background-color: #4CAF50;
                 border: none;
                 color: white;
-                padding: 16px 32px;
+                padding-left: 20px;
                 text-align: left;
                 text-decoration: none;
                 display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
+                font-size: 10px;
+                margin-top: 10px;
                 transition-duration: 0.4s;
                 cursor: pointer;
             }
@@ -228,11 +229,11 @@ if (isset($_SESSION['dosen_id'])) {
             .buttonfilterHov {
                 background-color: white;
                 color: black;
-                border: 2px solid #F7E9A0;
+                border: 2px solid #f7b358;
             }
 
             .buttonfilterHov:hover {
-                background-color: #F7E9A0;
+                background-color: #f7b358;
                 color: black;
             }
             
