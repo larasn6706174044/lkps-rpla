@@ -180,132 +180,133 @@ if (isset($_SESSION['dosen_id'])) {
                 <form action="logic.php" id="form" method="POST" enctype='multipart/form-data'>
                     <div class="row ">
                         <div class="col-100" style="font-size:32px;font-weight:bold;letter-spacing:0.3px">Upload Berkas </div>
-                        <div style="border:2px solid #fbf4d0; border-radius:4px; width:25%;margin-bottom:10%;margin-left:5%"></div>
-                        <div class="form-group row text-left">
-                            
-                            <div class="col-25"><label for="lname">Jenis Berkas</label></div>
-                            <div class="col-75 text-left">
-                                <select name="jenis" id="jenis" class="js-example-basic-single" style="width:100%">
-                                    <option value="-" >Pilih Jenis Berkas</option>
-                                    </optgroup>
-                                    <optgroup label="1.Tata Pamong, Tata Kelola, dan Kerjasama">
-                                        <option value="1.a. Data Kerja Sama Tridharma">1.a. Data Kerja Sama Tridharma</option>
-                                    </optgroup>
-                                    <optgroup label="2.Mahasiswa">
-                                        <option value="2.a. Data Seleksi Mahasiswa">2.a Data Seleksi Mahasiswa</option>
-                                        <option value="2.b. Data Mahasiswa Asing">2.b Data Mahasiswa Asing</option>
-                                    </optgroup>
-                                    <optgroup label="3.a. Profil Dosen">
-                                        <option
-                                            value="3.a.1. Data Dosen Tetap Perguruan Tinggi yang ditugaskan di Program Studi yang Diakreditasi">
-                                            3.a.1 Data Dosen Tetap Perguruan Tinggi yang ditugaskan di Program Studi yang
-                                            Diakreditasi</option>
-                                        <option value="3.a.2. Data Dosen Pembimbing Tugas Akhir">3.a.2. Data Dosen
-                                            Pembimbing Tugas Akhir</option>
-                                        <option
-                                            value="3.a.3. Data Ekuivalen Waktu Mengajar Penuh (SWMP) Dosen Tetap Perguruan Tinggi">
-                                            3.a.3. Data Ekuivalen Waktu Mengajar Penuh (SWMP) Dosen Tetap Perguruan Tinggi
-                                        </option>
-                                        <option
-                                            value="3.a.4. Data Dosen Tidak Tetap yang ditugaskan di PS yang diakreditasi">
-                                            3.a.4. Data Dosen Tidak Tetap yang ditugaskan di PS yang diakreditasi</option>
-                                        <option value="3.a.5. Data Dosen Industri/Praktisi">3.a.5. Data Dosen
-                                            Industri/Praktisi</option>
-                                    </optgroup>
-                                    <optgroup label="3.b. Kinerja Dosen">
-                                        <option value="3.b.1. Data Pengakuan/Rekognisi DTPS">3.b.1. Data Pengakuan/Rekognisi
-                                            DTPS</option>
-                                        <option value="3.b.2. Data Penelitian DTPS">3.b.2. Data Penelitian DTPS</option>
-                                        <option value="3.b.3. Data Pengabdian Kepada Masyarakat DTPS">3.b.3. Data Pengabdian
-                                            Kepada Masyarakat DTPS</option>
-                                        <option value="3.b.4. Data Publikasi Ilmiah DTPS">3.b.4. Data Publikasi Ilmiah DTPS
-                                        </option>
-                                        <option value="3.b.5. Data Pagelaran/pameran/presentasi/publikasi Ilmiah DTPS">
-                                            3.b.5. Data Pagelaran/pameran/presentasi/publikasi Ilmiah DTPS</option>
-                                        <option value="3.b.6. Data Karyailmiah DTPS yang disitasi dalam 3 tahun terakhir">
-                                            3.b.6. Data Karyailmiah DTPS yang disitasi dalam 3 tahun terakhir</option>
-                                        <option value="3.b.7. Data Produk/Jasa DTPS yang diadopsi oleh Industir/Masyarakat">
-                                            3.b.7. Data Produk/Jasa DTPS yang diadopsi oleh Industir/Masyarakat</option>
-                                        <option value="3.b.8. Data Luaran penelitian/PKM Lainnya oleh DTPS">3.b.8. Data
-                                            Luaran penelitian/PKM Lainnya oleh DTPS</option>
-                                    </optgroup>
-                                    <optgroup label="4. Keuangan, Sarana, dan Prasarana">
-                                        <option value="4.a. Data Penggunaan Dana">4.a. Data Penggunaan Dana</option>
-                                    </optgroup>
-                                    <optgroup label="5. Pendidikan">
-                                        <option value="5.a. Data Kurikulum, Capaian Pembelajaran dan Rencana Pembelajaran">
-                                            5.a Data Kurikulum, Capaian Pembelajaran dan Rencana Pembelajaran</option>
-                                        <option value="5.b. Data Integrasi Kegiatan Penelitian/PKM kedalam Pembelajaran">5.b
-                                            Data Integrasi Kegiatan Penelitian/PKM kedalam Pembelajaran</option>
-                                        <option value="5.c. Data Kepuasan Mahasiswa">5.c. Data Kepuasan Mahasiswa</option>
-                                    </optgroup>
-                                    <optgroup label="6. Penelitian">
-                                        <option value="6.a. Data Penelitian DTPS yang melibatkan Mahasiswa">6.a Data
-                                            Penelitian DTPS yang melibatkan Mahasiswa</option>
-                                        <option value="6.b. Data Penelitian DTPS yang menjadi rujukan tema tesis/disertasi">
-                                            6.b. Data Penelitian DTPS yang menjadi rujukan tema tesis/disertasi</option>
-                                    </optgroup>
-                                    <optgroup label="7. Pengabdian kepada Masyarakat">
-                                        <option value="7.a. PKM DTPS yang melibatkan Mahasiswa">7.a. PKM DTPS yang melibatkan
-                                            Mahasiswa</option>
-                                    </optgroup>
-                                    <optgroup label="8. Luaran dan Capaian Tridharma">
-                                    <optgroup label="8.a. Capaian Pembelajaran">
-                                        <option value="8.a. Data IPK Lulusan">8.a. Data IPK Lulusan</option>
-                                    </optgroup>
-                                    <optgroup label="8.b. Prestasi Mahasiswa">
-                                        <option value="8.b.1. Data Prestasi Akademik Mahasiswa">8.b.1. Data Prestasi
-                                            Akademik Mahasiswa</option>
-                                        <option value="8.b.2. Data Prestasi Non Akademik Mahasiswa">8.b.2. Data Prestasi Non
-                                            Akademik Mahasiswa</option>
-                                    </optgroup>
-                                    <optgroup label="8.c. Efektivitas dan Produktivitas Pendidikan">
-                                        <option value="8.c.1. Data Masa Studi Lulusan Program Program Diploma Tiga">8.c.1.
-                                            Data Masa Studi Lulusan Program Program Diploma Tiga</option>
-                                        <option value="8.c.2. Data Masa Studi Lulusan Program Sarjana/Sarjana Terapan">
-                                            8.c.2. Data Masa Studi Lulusan Program Sarjana/Sarjana Terapan</option>
-                                        <option
-                                            value="8.c.3. Data Mahasiswa Studi Program Magister/Magister Terapan/Spesialis">
-                                            8.c.3. Data Mahasiswa Studi Program Magister/Magister Terapan/Spesialis</option>
-                                        <option
-                                            value="8.c.4. Data Masa Studi Lulusan Program Doktor/Doktor Terapan/Sub-spesialis">
-                                            8.c.4. Data Masa Studi Lulusan Program Doktor/Doktor Terapan/Sub-spesialis
-                                        </option>
-                                    </optgroup>
-                                    <optgroup label="8.d. Daya Saing Lulusan">
-                                        <option value="8.d.1. Data Waktu Tunggu Lulusan Program Diploma Tiga">8.d.1. Data
-                                            Waktu Tunggu Lulusan Program Diploma Tiga</option>
-                                        <option value="8.d.2. Data Waktu Tunggu Lulusan Program Sarjana">8.d.1. Data Waktu
-                                            Tunggu Lulusan Program Sarjana</option>
-                                        <option value="8.d.3. Data Waktu Tunggu Lulusan Program Sarjana Terapan">8.d.1. Data
-                                            Waktu Tunggu Lulusan Program Sarjana Terapan</option>
-                                        <option value="8.d.4. Data Kesesuaian Bidang Kerja Lulusan">8.d.4. Data Kesesuaian
-                                            Bidang Kerja Lulusan</option>
-                                    </optgroup>
-                                    <optgroup label="8.e. Kinerja Lulusan">
-                                        <option value="8.e.1. Data Tempat Kerja Lulusan">8.e.1. Data Tempat Kerja Lulusan
-                                        </option>
-                                        <option value="8.e.2. Data Kepuasan Pengguna">8.e.2. Data Kepuasan Pengguna</option>
-                                    </optgroup>
-                                    <optgroup label="8.f. Luaran Penelitian dan PkM Mahasiswa">
-                                        <option value="8.f.1. Data Publikasi Ilmiah Mahasiswa">8.f.1. Data Publikasi Ilmiah
-                                            Mahasiswa</option>
-                                        <option value="8.f.2. Data Pagelaran/pameran/presentasi/publikasi Ilmiah Mahasiswa">
-                                            8.f.2. Data Pagelaran/pameran/presentasi/publikasi Ilmiah Mahasiswa</option>
-                                        <option value="8.f.3. Data Karyailmiah Mahasiswa wayang disitasi">8.f.3. Data
-                                            Karyailmiah Mahasiswa wayang disitasi</option>
-                                        <option
-                                            value="8.f.4. Data Produk/Jasa yang dihasilkan Mahasiswa yang Diadopsi oleh Industri/Masyarakat">
-                                            8.f.4. Data Produk/Jasa yang dihasilkan Mahasiswa yang Diadopsi oleh
-                                            Industri/Masyarakat</option>
-                                        <option value="8.f.5. Data Luaran Lainnya yang dihasilkan Mahasiswa">8.f.5. Data
-                                            Luaran Lainnya yang dihasilkan Mahasiswa</option>
-                                    </optgroup>
-                                    <option value="Daftar Program Studi di UPPS">Daftar Program Studi di UPPS</option>
-                                    </optgroup>
-                                </select>
-                            </div>
+                        <div style="border:2px solid #fbf4d0; border-radius:4px; width:25%;margin-bottom:10%;margin-left:5%">
+                    </div>
+                    <div class="row text-left">
+                        
+                        <div class="col-25"><label for="lname">Jenis Berkas</label></div>
+                        <div class="col-75 text-left" style="padding-top:11px">
+                            <select name="jenis" id="jenis" class="js-example-basic-single" style="width:100%">
+                                <option value="-" >Pilih Jenis Berkas</option>
+                                </optgroup>
+                                <optgroup label="1.Tata Pamong, Tata Kelola, dan Kerjasama">
+                                    <option value="1.a. Data Kerja Sama Tridharma">1.a. Data Kerja Sama Tridharma</option>
+                                </optgroup>
+                                <optgroup label="2.Mahasiswa">
+                                    <option value="2.a. Data Seleksi Mahasiswa">2.a Data Seleksi Mahasiswa</option>
+                                    <option value="2.b. Data Mahasiswa Asing">2.b Data Mahasiswa Asing</option>
+                                </optgroup>
+                                <optgroup label="3.a. Profil Dosen">
+                                    <option
+                                        value="3.a.1. Data Dosen Tetap Perguruan Tinggi yang ditugaskan di Program Studi yang Diakreditasi">
+                                        3.a.1 Data Dosen Tetap Perguruan Tinggi yang ditugaskan di Program Studi yang
+                                        Diakreditasi</option>
+                                    <option value="3.a.2. Data Dosen Pembimbing Tugas Akhir">3.a.2. Data Dosen
+                                        Pembimbing Tugas Akhir</option>
+                                    <option
+                                        value="3.a.3. Data Ekuivalen Waktu Mengajar Penuh (SWMP) Dosen Tetap Perguruan Tinggi">
+                                        3.a.3. Data Ekuivalen Waktu Mengajar Penuh (SWMP) Dosen Tetap Perguruan Tinggi
+                                    </option>
+                                    <option
+                                        value="3.a.4. Data Dosen Tidak Tetap yang ditugaskan di PS yang diakreditasi">
+                                        3.a.4. Data Dosen Tidak Tetap yang ditugaskan di PS yang diakreditasi</option>
+                                    <option value="3.a.5. Data Dosen Industri/Praktisi">3.a.5. Data Dosen
+                                        Industri/Praktisi</option>
+                                </optgroup>
+                                <optgroup label="3.b. Kinerja Dosen">
+                                    <option value="3.b.1. Data Pengakuan/Rekognisi DTPS">3.b.1. Data Pengakuan/Rekognisi
+                                        DTPS</option>
+                                    <option value="3.b.2. Data Penelitian DTPS">3.b.2. Data Penelitian DTPS</option>
+                                    <option value="3.b.3. Data Pengabdian Kepada Masyarakat DTPS">3.b.3. Data Pengabdian
+                                        Kepada Masyarakat DTPS</option>
+                                    <option value="3.b.4. Data Publikasi Ilmiah DTPS">3.b.4. Data Publikasi Ilmiah DTPS
+                                    </option>
+                                    <option value="3.b.5. Data Pagelaran/pameran/presentasi/publikasi Ilmiah DTPS">
+                                        3.b.5. Data Pagelaran/pameran/presentasi/publikasi Ilmiah DTPS</option>
+                                    <option value="3.b.6. Data Karyailmiah DTPS yang disitasi dalam 3 tahun terakhir">
+                                        3.b.6. Data Karyailmiah DTPS yang disitasi dalam 3 tahun terakhir</option>
+                                    <option value="3.b.7. Data Produk/Jasa DTPS yang diadopsi oleh Industir/Masyarakat">
+                                        3.b.7. Data Produk/Jasa DTPS yang diadopsi oleh Industir/Masyarakat</option>
+                                    <option value="3.b.8. Data Luaran penelitian/PKM Lainnya oleh DTPS">3.b.8. Data
+                                        Luaran penelitian/PKM Lainnya oleh DTPS</option>
+                                </optgroup>
+                                <optgroup label="4. Keuangan, Sarana, dan Prasarana">
+                                    <option value="4.a. Data Penggunaan Dana">4.a. Data Penggunaan Dana</option>
+                                </optgroup>
+                                <optgroup label="5. Pendidikan">
+                                    <option value="5.a. Data Kurikulum, Capaian Pembelajaran dan Rencana Pembelajaran">
+                                        5.a Data Kurikulum, Capaian Pembelajaran dan Rencana Pembelajaran</option>
+                                    <option value="5.b. Data Integrasi Kegiatan Penelitian/PKM kedalam Pembelajaran">5.b
+                                        Data Integrasi Kegiatan Penelitian/PKM kedalam Pembelajaran</option>
+                                    <option value="5.c. Data Kepuasan Mahasiswa">5.c. Data Kepuasan Mahasiswa</option>
+                                </optgroup>
+                                <optgroup label="6. Penelitian">
+                                    <option value="6.a. Data Penelitian DTPS yang melibatkan Mahasiswa">6.a Data
+                                        Penelitian DTPS yang melibatkan Mahasiswa</option>
+                                    <option value="6.b. Data Penelitian DTPS yang menjadi rujukan tema tesis/disertasi">
+                                        6.b. Data Penelitian DTPS yang menjadi rujukan tema tesis/disertasi</option>
+                                </optgroup>
+                                <optgroup label="7. Pengabdian kepada Masyarakat">
+                                    <option value="7.a. PKM DTPS yang melibatkan Mahasiswa">7.a. PKM DTPS yang melibatkan
+                                        Mahasiswa</option>
+                                </optgroup>
+                                <optgroup label="8. Luaran dan Capaian Tridharma">
+                                <optgroup label="8.a. Capaian Pembelajaran">
+                                    <option value="8.a. Data IPK Lulusan">8.a. Data IPK Lulusan</option>
+                                </optgroup>
+                                <optgroup label="8.b. Prestasi Mahasiswa">
+                                    <option value="8.b.1. Data Prestasi Akademik Mahasiswa">8.b.1. Data Prestasi
+                                        Akademik Mahasiswa</option>
+                                    <option value="8.b.2. Data Prestasi Non Akademik Mahasiswa">8.b.2. Data Prestasi Non
+                                        Akademik Mahasiswa</option>
+                                </optgroup>
+                                <optgroup label="8.c. Efektivitas dan Produktivitas Pendidikan">
+                                    <option value="8.c.1. Data Masa Studi Lulusan Program Program Diploma Tiga">8.c.1.
+                                        Data Masa Studi Lulusan Program Program Diploma Tiga</option>
+                                    <option value="8.c.2. Data Masa Studi Lulusan Program Sarjana/Sarjana Terapan">
+                                        8.c.2. Data Masa Studi Lulusan Program Sarjana/Sarjana Terapan</option>
+                                    <option
+                                        value="8.c.3. Data Mahasiswa Studi Program Magister/Magister Terapan/Spesialis">
+                                        8.c.3. Data Mahasiswa Studi Program Magister/Magister Terapan/Spesialis</option>
+                                    <option
+                                        value="8.c.4. Data Masa Studi Lulusan Program Doktor/Doktor Terapan/Sub-spesialis">
+                                        8.c.4. Data Masa Studi Lulusan Program Doktor/Doktor Terapan/Sub-spesialis
+                                    </option>
+                                </optgroup>
+                                <optgroup label="8.d. Daya Saing Lulusan">
+                                    <option value="8.d.1. Data Waktu Tunggu Lulusan Program Diploma Tiga">8.d.1. Data
+                                        Waktu Tunggu Lulusan Program Diploma Tiga</option>
+                                    <option value="8.d.2. Data Waktu Tunggu Lulusan Program Sarjana">8.d.1. Data Waktu
+                                        Tunggu Lulusan Program Sarjana</option>
+                                    <option value="8.d.3. Data Waktu Tunggu Lulusan Program Sarjana Terapan">8.d.1. Data
+                                        Waktu Tunggu Lulusan Program Sarjana Terapan</option>
+                                    <option value="8.d.4. Data Kesesuaian Bidang Kerja Lulusan">8.d.4. Data Kesesuaian
+                                        Bidang Kerja Lulusan</option>
+                                </optgroup>
+                                <optgroup label="8.e. Kinerja Lulusan">
+                                    <option value="8.e.1. Data Tempat Kerja Lulusan">8.e.1. Data Tempat Kerja Lulusan
+                                    </option>
+                                    <option value="8.e.2. Data Kepuasan Pengguna">8.e.2. Data Kepuasan Pengguna</option>
+                                </optgroup>
+                                <optgroup label="8.f. Luaran Penelitian dan PkM Mahasiswa">
+                                    <option value="8.f.1. Data Publikasi Ilmiah Mahasiswa">8.f.1. Data Publikasi Ilmiah
+                                        Mahasiswa</option>
+                                    <option value="8.f.2. Data Pagelaran/pameran/presentasi/publikasi Ilmiah Mahasiswa">
+                                        8.f.2. Data Pagelaran/pameran/presentasi/publikasi Ilmiah Mahasiswa</option>
+                                    <option value="8.f.3. Data Karyailmiah Mahasiswa wayang disitasi">8.f.3. Data
+                                        Karyailmiah Mahasiswa wayang disitasi</option>
+                                    <option
+                                        value="8.f.4. Data Produk/Jasa yang dihasilkan Mahasiswa yang Diadopsi oleh Industri/Masyarakat">
+                                        8.f.4. Data Produk/Jasa yang dihasilkan Mahasiswa yang Diadopsi oleh
+                                        Industri/Masyarakat</option>
+                                    <option value="8.f.5. Data Luaran Lainnya yang dihasilkan Mahasiswa">8.f.5. Data
+                                        Luaran Lainnya yang dihasilkan Mahasiswa</option>
+                                </optgroup>
+                                <option value="Daftar Program Studi di UPPS">Daftar Program Studi di UPPS</option>
+                                </optgroup>
+                            </select>
                         </div>
+                    </div>
                     <div class="row text-left">
                         <div class="col-25  text-left"><label for="lname">Tanggal Upload</label></div>
                         <div class="col-75"><input type="text" readonly name="tglshow" id="tglshow"
@@ -327,34 +328,7 @@ if (isset($_SESSION['dosen_id'])) {
             </div>
         </div>
     </center>
-    <!-- <div class="output">
-    <span class="badge" id="badge">Filter</span>
-        <select name="filter" id="filter" class="form-control" onchange="getData()"> 
-            <option value="1">1. Tata Pamong, Tata Kelola, dan Kerjasama</option>
-            <option value="2">2. Mahasiswa</option>
-            <option value="3">3. Profil Dosen</option>
-            <option value="4">4. Keuangan, Sarana, dan Prasarana</option>
-            <option value="5">5. Pendidikan</option>
-            <option value="6">6. Penelitian</option>
-            <option value="7">7. Pengabdian kepada Masyarakat</option>
-            <option value="8">8. Luaran dan Capaian Tridharma</option>
-        </select>
-        <center>
-            <div class="tampung">
 
-            </div>
-        </center>
-        <footer>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <p>Raka Daffa Arrival & Septy Rahmadilha & Muhammad Hisyam Fadhil &copy;<?= date('Y'); ?> | <a
-                                href="#">LKPS</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div> -->
 
     
 

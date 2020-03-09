@@ -23,9 +23,6 @@ if (isset($_SESSION['dosen_id'])) {
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
         <style>
-            body{
-                font-family: 'Open Sans', 'Roboto';
-            }
             .but {
                 display: inline-block;
                 padding: 14px 16px;
@@ -52,12 +49,13 @@ if (isset($_SESSION['dosen_id'])) {
             .output {
                 width: 20%;
                 position: relative;
-                padding-top: 50px;
+                padding-top: 35px;
                 padding-bottom: 50px;
                 padding-left: 30px;
                 float: left;
                 background-color: #fbf4d0;
                 border: 0px solid #fbf4d0;
+                margin-top:20px;
             }
 
             .tampung {
@@ -180,36 +178,6 @@ if (isset($_SESSION['dosen_id'])) {
 
             .show {display: block;}
 
-            .topnav {
-                overflow: hidden;
-                background-color: #314152;
-
-            }
-
-            .topnav button, .topnav a {
-                float: right;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 17px;
-                transition:0.3s
-            }
-
-            .topnav a:hover, .but:hover:not(.aktif) {
-                background-color: #F7E9A0;
-                color: #314152;
-            }
-
-            .but.aktif{
-                background-color: #F7E9A0;
-            }
-
-            .topnav a.active {
-                background-color: #F7E9A0;
-                color: #314152;
-
-            }
             .buttonfilter {
                 width: 200px;
                 height: 50px;
@@ -243,24 +211,7 @@ if (isset($_SESSION['dosen_id'])) {
         </style>
     </head>
     <body>
-    <div class="topnav">
-        <a href="logout.php">Logout</a>
-        <button type="button" class="but" data-toggle="modal" data-target="#myModal">Ubah Password</button>
-        <a  href="tampildata.php" class="active">Lihat Data</a>
-        <a href="dosen.php" >Tambah Data</a>
-        <a href=""" style="position:absolute;left:0px">Selamat datang,
-        <?php
-        if($_SESSION['kelamin']=='L') {
-            echo "Pak ".$_SESSION['nama_dosen'];
-        }
-
-        else if($_SESSION['kelamin']=='P') {
-            echo "Ibu ".$_SESSION['nama_dosen'];
-        }
-
-        ?>
-        </a>
-    </div>
+    <?php include_once('template/header.php'); ?>
 
     <div class="tampilData">
         <!--    membuat menu berada disebelah kiri  -->
