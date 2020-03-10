@@ -11,6 +11,6 @@ if (isset($_GET['file_id'])) {
 
     $del = "DELETE FROM data_upload WHERE id = '$id'";
     $result = mysqli_query($conn,$del);
-    header('Location:dosen.php');
+    header('Location:tampildata.php');
 }
 ?>

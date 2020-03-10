@@ -36,8 +36,9 @@ if (isset($_SESSION['dosen_id'])) {
             }
 
             .tampil {
-                background-color: #FFFFFF;
+                background-color: #F7E9A0;
                 width: 100%;
+                height: 100%;
                 position: absolute;
                 /*padding-bottom: 50px;*/
                 /*padding-left: 20px;*/
@@ -47,25 +48,29 @@ if (isset($_SESSION['dosen_id'])) {
             }
 
             .output {
-                width: 20%;
+                width: 15%;
                 position: relative;
-                padding-top: 35px;
-                padding-bottom: 50px;
+                /*padding-top: 35px;*/
+                padding-bottom: 20px;
                 padding-left: 30px;
                 float: left;
-                background-color: #fbf4d0;
-                border: 0px solid #fbf4d0;
-                margin-top:20px;
+                background-color: #F7E9A0;
+                margin-top:45px;
             }
 
             .tampung {
                 width: 80%;
                 position: relative;
+                margin-top: 40px;
+                margin-right:10px;
                 padding-top: 55px;
-                padding-bottom: 60px;
+                padding-bottom: 100px;
                 padding-left: 20px;
                 padding-right: 40px;
                 float: right;
+                background-color: #FFFFFF;
+                border: 2px solid #F7E9A0;
+                border-radius: 7px;
             }
 
             footer {
@@ -192,6 +197,7 @@ if (isset($_SESSION['dosen_id'])) {
                 margin-top: 10px;
                 transition-duration: 0.4s;
                 cursor: pointer;
+                border-radius: 5px;
             }
 
             .buttonfilterHov {
@@ -213,7 +219,7 @@ if (isset($_SESSION['dosen_id'])) {
     <body>
     <?php include_once('template/header.php'); ?>
 
-    <div class="tampilData">
+    <div class="tampil">
         <!--    membuat menu berada disebelah kiri  -->
         <div class="output">
             <button class="buttonfilter buttonfilterHov" onclick="getData1()">1. Tata Pamong, Tata Kelola, dan Kerjasama</button>
@@ -234,15 +240,15 @@ if (isset($_SESSION['dosen_id'])) {
         </div>
     </div>
 <!--    batas tampil kanan-->
-    <footer>
-            <div class="container text-center footer">
-                <div class="row">
-                    <div class="col-lg-12">
-                    <p>Raka Daffa Arrival & Septy Rahmadilha & Muhammad Hisyam Fadhil &copy;<?= date('Y'); ?> | <a href="#">LKPS</a>.</p>
-                    </div>
-                </div>
-            </div>
-    </footer>
+<!--    <footer>-->
+<!--            <div class="container text-center footer">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-12">-->
+<!--                    <p>Raka Daffa Arrival & Septy Rahmadilha & Muhammad Hisyam Fadhil &copy;--><?//= date('Y'); ?><!-- | <a href="#">LKPS</a>.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--    </footer>-->
 
 
     <?php include_once('template/modal.php');?>
