@@ -186,7 +186,6 @@ if (isset($_SESSION['dosen_id'])) {
             .buttonfilter {
                 width: 200px;
                 height: 50px;
-                background-color: #4CAF50;
                 border: none;
                 color: white;
                 padding-left: 20px;
