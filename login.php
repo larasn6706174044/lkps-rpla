@@ -90,6 +90,7 @@
                     window.location.replace("dosen.php");
                 } else if (dataResult.statusCode == 201) {
                     swal("Gagal!", dataResult.Pesan, "error");
+                    window.alert("Username dan Password salah")
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
