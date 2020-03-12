@@ -28,7 +28,11 @@
                 <p class="as">Masuk sebagai...</p>
                 <div class="button-container">
                     <button onclick="window.location.href='login.php'">DOSEN</button>
-                    <button onclick="window.location.href='siswa.php'" class="mahasiswa">MAHASISWA</button>
+                </div>
+                <br>
+                <p class="as">Lihat Hasil Kuesioner Alumni</p>
+                <div class="button-container">
+                    <button onclick="window.location.href='siswa.php'" class="mahasiswa">Hasil Kuesioner</button>
                 </div>
             </div>
         </div>
